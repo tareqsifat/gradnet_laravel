@@ -96,28 +96,32 @@
                     </li>
                     </ul>
                     <div class="auth_dropdown">
-                    <button type="button" class="flex items-center gap-1 group">
-                        <span
-                        class="text-[#0000008c] text-sm font-medium font-poppins group-hover:text-black transition-all"
-                        >
-                        Login
-                        </span>
-                        <i>
-                        <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            viewBox="0 0 24 24"
-                            stroke-width="1.5"
-                            stroke="none"
-                            class="w-[14px] h-[14px] fill-[#0000008c] group-hover:fill-black"
-                        >
-                            <path
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            d="M19.5 8.25l-7.5 7.5-7.5-7.5"
-                            />
-                        </svg>
-                        </i>
-                    </button>
+                        @if (auth()->check())
+                            {{-- <span>{{auth()->user()->name}}</span> --}}
+                            <select name="" id="">
+                                <option value="">{{auth()->user()->name}}</option>
+                                <option value="" class="logout">
+                                    <a href="{{ route('logout') }}">
+                                        logout
+                                    </a>
+                                </option>
+                            </select>
+                        @else
+                            <button type="button" class="flex items-center gap-1 group">
+                                <span class="text-[#0000008c] text-sm font-medium font-poppins group-hover:text-black transition-all">
+                                    <a href="{{ route('login') }}">Login</a>
+                                </span>
+                                <i>
+                                    <svg xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 0 24 24"
+                                        stroke-width="1.5"
+                                        stroke="none"
+                                        class="w-[14px] h-[14px] fill-[#0000008c] group-hover:fill-black">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5"/>
+                                    </svg>
+                                </i>
+                            </button>
+                        @endif
                     </div>
                 </div>
                 <div class="lg:hidden">
@@ -303,6 +307,38 @@
             mainMenu.classList.toggle("left-0");
             mainMenu.classList.toggle("left_position");
         });
+        document.addEventListener('DOMContentLoaded', function () {
+            // Get all elements with the class 'logout'
+            var logoutElements = document.getElementsByClassName('logout');
+            console.log('123');
+
+            // Add a click event listener to each element
+            Array.from(logoutElements).forEach(function (element) {
+                element.addEventListener('click', function (event) {
+                    // Prevent the default action (e.g., following a link)
+                    event.preventDefault();
+
+                    // Create a new XMLHttpRequest object
+                    var xhr = new XMLHttpRequest();
+
+                    // Configure it to make a GET request to the logout route
+                    xhr.open('GET', '{{ route('logout') }}', true);
+
+                    // Define the callback function to handle the response
+                    xhr.onreadystatechange = function () {
+                        if (xhr.readyState === 4 && xhr.status === 200) {
+                            // Redirect to '/'
+                            window.location.href = '/';
+                        }
+                    };
+
+                    // Send the request
+                    xhr.send();
+                });
+            });
+        });
+
+
         </script>
     </body>
 </html>
