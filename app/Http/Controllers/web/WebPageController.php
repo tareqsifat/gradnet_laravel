@@ -27,9 +27,9 @@ class WebPageController extends Controller
     {
         return view('web.business');
     }
-    public function directory()
+    public function directories()
     {
-        return view('web.directory');
+        return view('web.directories');
     }
     public function articles()
     {

@@ -31,7 +31,7 @@
             <div class="container mx-auto">
                 <div class="header_menu flex items-center justify-between gap-10 max-lg:py-3">
                 <div class="logo_area">
-                    <a href="index.html">
+                    <a href="{{ route('home') }}">
                     <img class="w-10" src="{{ asset('assets/web') }}/img/logo/logo.png" alt="" />
                     </a>
                 </div>
@@ -39,42 +39,42 @@
                     class="left_position bg-white main_menu flex lg:flex-row flex-col lg:items-center lg:justify-between lg:gap-10 gap-4 max-lg:p-10 lg:w-[calc(100%_-_80px)] md:w-[400px] w-[300px] lg:static fixed top-0 max-lg:shadow-theme_shadow h-full transition-all">
                     <ul class="flex lg:flex-row flex-col lg:items-center items-start lg:gap-5 gap-1">
                     <li>
-                        <a href="about.html"
+                        <a href="{{ route('about') }}"
                         class="text-black text-opacity-80 text-[13.5px] lg:py-6 py-1 inline-block font font-semibold font-poppins hover:text-black transition-all">
                         About
                         </a>
                     </li>
                     <li>
-                        <a href="contact.html"
+                        <a href="{{ route('contact') }}"
                         class="text-[#0000008c] text-opacity-80 text-[13.5px] lg:py-6 py-1 inline-block font font-semibold font-poppins hover:text-black transition-all">
                         Contact
                         </a>
                     </li>
                     <li>
-                        <a href="committee.html"
+                        <a href="{{ route('committee') }}"
                         class="text-[#0000008c] text-opacity-80 text-[13.5px] lg:py-6 py-1 inline-block font font-semibold font-poppins hover:text-black transition-all">
                         Committee
                         </a>
                     </li>
                     <li>
-                        <ahref="businesses.html"
+                        <a href="{{ route('business') }}"
                         class="text-[#0000008c] text-opacity-80 text-[13.5px] lg:py-6 py-1 inline-block font font-semibold font-poppins hover:text-black transition-all"
                         >Businesses</a>
                     </li>
                     <li>
-                        <a href="directory.html"
+                        <a href="{{ route('directories') }}"
                         class="text-[#0000008c] text-opacity-80 text-[13.5px] lg:py-6 py-1 inline-block font font-semibold font-poppins hover:text-black transition-all">
                         Directory
                         </a>
                     </li>
                     <li>
-                        <a href="#0"
+                        <a href="{{ route('articles') }}"
                         class="text-[#0000008c] text-opacity-80 text-[13.5px] lg:py-6 py-1 inline-block font font-semibold font-poppins hover:text-black transition-all">
                         Articles
                         </a>
                     </li>
                     <li>
-                        <a href="news.html"
+                        <a href="{{ route('news') }}"
                         class="text-[#0000008c] text-opacity-80 text-[13.5px] lg:py-6 py-1 inline-block font font-semibold font-poppins hover:text-black transition-all">
                         News
                         </a
@@ -82,14 +82,14 @@
                     </li>
                     <li>
                         <a
-                        href="stories.html"
+                        href="{{ route('stories') }}"
                         class="text-[#0000008c] text-opacity-80 text-[13.5px] lg:py-6 py-1 inline-block font font-semibold font-poppins hover:text-black transition-all"
                         >Stories</a
                         >
                     </li>
                     <li>
                         <a
-                        href="offers.html"
+                        href="{{ route('offer') }}"
                         class="text-[#0000008c] text-opacity-80 text-[13.5px] lg:py-6 py-1 inline-block font font-semibold font-poppins hover:text-black transition-all"
                         >Offer</a
                         >
