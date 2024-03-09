@@ -35,3 +35,8 @@ Route::controller(WebPageController::class)->group(function(){
     Route::get('stories', 'stories')->name('stories');
     Route::get('offer', 'offer')->name('offer');
 });
+Route::get('/logout', function () {
+    Auth::logout();
+
+    return redirect('/');
+})->name('logout');
