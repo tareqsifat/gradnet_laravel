@@ -29,7 +29,7 @@ Route::controller(WebPageController::class)->group(function(){
     Route::get('contact', 'contact')->name('contact');
     Route::get('committee', 'committee')->name('committee');
     Route::get('business', 'business')->name('business');
-    // Route::get('directory', 'directory')->name('directory');
+    Route::get('directories', 'directories')->name('directories');
     Route::get('articles', 'articles')->name('articles');
     Route::get('news', 'news')->name('news');
     Route::get('stories', 'stories')->name('stories');
