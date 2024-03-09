@@ -1,0 +1,49 @@
+/*== Font family ==*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.left_position {
+  left: -300px;
+}
+
+.card_nav.director_nav button.tab_link {
+  color: #1a68ce;
+  border: 1px solid #1a68ce;
+}
+
+.card_nav.director_nav button.tab_link:hover,
+.card_nav.director_nav button.tab_link.active {
+  color: white;
+  background: #1a68ce;
+}
+
+@media (max-width: 991px) {
+  .left_position {
+    left: -400px;
+  }
+}
+
+/*== swiper navigation ==*/
+.swiper-button-next.style_one::after,
+.swiper-button-prev.style_one::after {
+  font-size: 20px;
+}
+
+/*== auth dropdown css ==*/
+button.auth_btn.active span {
+  color: #1a68ce !important;
+}
+button.auth_btn.active i svg {
+  fill: #1a68ce !important;
+}
+
+/*== multi step form css ==*/
+.step {
+  display: none;
+}
+.step.active {
+  display: block;
+}
