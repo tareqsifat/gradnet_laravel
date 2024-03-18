@@ -804,28 +804,28 @@
                                         <option value="full_member">Full Member</option>
                                     </select>
                                     @error('member_type')
-                                    <span style="color: #f00;">{{ $message }}</span>
+                                        <span style="color: #f00;">{{ $message }}</span>
                                     @enderror
                                 </div>
                                 <div class="input_group sm:col-span-2">
                                     <label for="ssc_roll" class="inline-block pb-1 text-sm text-black text-opacity-50 font-normal font-poppins">SSC Roll Number</label>
                                     <input type="text" id="ssc_roll" name="ssc_roll" placeholder="" class="border rounded-md h-10 w-full p-2 text-sm font-light font-poppins text-text_colors focus:outline-none focus:border-theme_color" />
                                     @error('ssc_roll')
-                                    <span style="color: #f00;">{{ $message }}</span>
+                                        <span style="color: #f00;">{{ $message }}</span>
                                     @enderror
                                 </div>
                                 <div class="input_group sm:col-span-2">
                                     <label for="ssc_reg" class="inline-block pb-1 text-sm text-black text-opacity-50 font-normal font-poppins">SSC Registration No</label>
                                     <input type="text" id="ssc_reg" name="ssc_reg" placeholder="" class="border rounded-md h-10 w-full p-2 text-sm font-light font-poppins text-text_colors focus:outline-none focus:border-theme_color" />
                                     @error('ssc_reg')
-                                    <span style="color: #f00;">{{ $message }}</span>
+                                        <span style="color: #f00;">{{ $message }}</span>
                                     @enderror
                                 </div>
                                 <div class="input_group sm:col-span-2">
                                     <label for="pass_year" class="inline-block pb-1 text-sm text-black text-opacity-50 font-normal font-poppins">Passing Year</label>
                                     <select id="yearPicker" name="passing_year" class="text-black font-normal font-poppins w-full border h-10 rounded-md p-2 focus:outline-none focus:border-theme_color"></select>
                                     @error('passing_year')
-                                    <span style="color: #f00;">{{ $message }}</span>
+                                        <span style="color: #f00;">{{ $message }}</span>
                                     @enderror
                                 </div>
                                 <div class="input_group sm:col-span-2">
@@ -841,7 +841,7 @@
                                         <option value="7">Sylhet</option>
                                     </select>
                                     @error('ssc_board')
-                                    <span style="color: #f00;">{{ $message }}</span>
+                                        <span style="color: #f00;">{{ $message }}</span>
                                     @enderror
                                 </div>
                                 <div class="input_group sm:col-span-4">
