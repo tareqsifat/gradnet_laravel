@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\web\WebPageController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
@@ -18,8 +19,9 @@ use Illuminate\Support\Facades\Route;
 // Route::get('/', function () {
 //     return view('welcome');
 // });
-
+//auth routes
 Auth::routes();
+Route::get('post-register', [RegisterController::class, 'postRegister'])->name('post-register');
 
 // Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
@@ -35,8 +37,8 @@ Route::controller(WebPageController::class)->group(function(){
     Route::get('stories', 'stories')->name('stories');
     Route::get('offer', 'offer')->name('offer');
 });
-Route::get('/logout', function () {
-    Auth::logout();
+// Route::get('/logout', function () {
+//     Auth::logout();
 
-    return redirect('/');
-})->name('logout');
+//     return redirect('/');
+// })->name('logout');
