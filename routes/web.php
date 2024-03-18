@@ -33,6 +33,8 @@ Route::controller(WebPageController::class)->group(function(){
     Route::get('offer', 'offer')->name('offer');
 });
 
+
+
 Route::get('/login', [LoginController::class, 'showLoginForm'])->name('login');
 Route::post('/login', [LoginController::class, 'login']);
 Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
