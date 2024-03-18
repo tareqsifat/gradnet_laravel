@@ -27,14 +27,14 @@ return new class extends Migration
             $table->string('ssc_reg')->nullable();
             $table->string('ssc_document')->nullable();
             $table->string('nid_no')->nullable();
-            $table->string('nid_scaned')->nullable();
+            $table->string('nid_scanned')->nullable();
             $table->text('emergency_contact')->nullable();
             $table->text('permanent_address')->nullable();
             $table->string('brn_number')->nullable();
             $table->string('passing_year')->nullable();
             $table->date('birth_day')->nullable();
-            $table->date('blood_group')->nullable();
-            $table->boolean('is_approved')->nullable();
+            $table->integer('blood_group')->nullable();
+            $table->boolean('is_approved')->default(false)->nullable();
             $table->rememberToken();
             $table->timestamps();
         });

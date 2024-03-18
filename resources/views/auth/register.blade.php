@@ -855,7 +855,7 @@
                                             </div>
                                             <input id="dropzone-file" name="ssc_document" type="file" />
                                             @error('ssc_document')
-                                            <span style="color: #f00;">{{ $message }}</span>
+                                                <span style="color: #f00;">{{ $message }}</span>
                                             @enderror
                                         </label>
                                     </div>

@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
 use App\Models\User;
+use App\Providers\RouteServiceProvider;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
@@ -28,7 +29,7 @@ class RegisterController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/post-register';
+    protected $redirectTo = RouteServiceProvider::HOME;
 
     /**
      * Create a new controller instance.
@@ -58,11 +59,11 @@ class RegisterController extends Controller
             'password' => ['required', 'string', 'min:8', 'confirmed'],
             'photo' => ['required',  'file', 'mimes:jpeg,png,jpg', 'max:2048'],
             'member_type' => ['required', 'string', 'max:255'],
-            'ssc_roll' => ['required', 'string', 'max:255'],
-            'ssc_board' => ['required', 'string', 'max:255'],
-            'ssc_reg' => ['required', 'string', 'max:255'],
-            'passing_year' => ['required', 'string', 'max:255'],
-            'ssc_document' => ['required', 'file', 'mimes:jpeg,png,jpg,pdf', 'max:2048'], // Allow JPEG, PNG, JPG, PDF
+            'ssc_roll' => ['nullable', 'string', 'max:255'],
+            'ssc_board' => ['nullable', 'string', 'max:255'],
+            'ssc_reg' => ['nullable', 'string', 'max:255'],
+            'passing_year' => ['nullable', 'string', 'max:255'],
+            'ssc_document' => ['nullable', 'file', 'mimes:jpeg,png,jpg,pdf', 'max:2048'], // Allow JPEG, PNG, JPG, PDF
             'nid_no' => ['nullable','string', 'max:255'],
             'nid_scaned' => ['nullable', 'file', 'mimes:jpeg,png,jpg,pdf', 'max:2048'], // Allow JPEG, PNG, JPG, PDF
             'emergency_contact' => ['nullable','string', 'max:255'],
@@ -93,9 +94,9 @@ class RegisterController extends Controller
         $user->ssc_roll = $data['ssc_roll'];
         $user->ssc_board = $data['ssc_board'];
         $user->ssc_reg = $data['ssc_reg'];
-        $user->ssc_document = $data['ssc_document'];
+        $user->ssc_document = isset($data['ssc_document']) ?? $data['ssc_document'];
         $user->nid_no = $data['nid_no'];
-        $user->nid_scaned = $data['nid_scaned'];
+        $user->nid_scanned = isset($data['nid_scaned']) ?? $data['nid_scaned'];
         $user->emergency_contact = $data['emergency_contact'];
         $user->permanent_address = $data['permanent_address'];
         $user->brn_number = $data['brn_number'];
@@ -111,6 +112,6 @@ class RegisterController extends Controller
         return $user;
     }
     public function postRegister(){
-        return view('post-register');
+        return view('auth.post-register');
     }
 }

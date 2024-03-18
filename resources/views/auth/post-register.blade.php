@@ -9,6 +9,7 @@
 		<title>Gradnet</title>
 	</head>
     <body>
+        @dd(Auth::user())
 		<!-- signup area start -->
 		<div class="max-w-[620px] mx-auto min-h-screen lg:py-24 md:py-16 py-12">
             <!-- logo area -->
@@ -20,6 +21,7 @@
                     Step 1/3
                 </div>
             </div>
+            {{-- @dd(session()->all()); --}}
             <!-- account area -->
             <div class="flex flex-col gap-5">
                 <div class="bg-[#fff0d0] text-[#855d0b] p-4 rounded-md text-base font-normal font-poppins leading-normal text-left">
@@ -28,8 +30,8 @@
                         members and eligible people are entitled to create an account or sign up here
                     </p>
                 </div>
-                {{-- <form id="multi-step-form" action="{{ route('register') }}" method="POST" enctype="multipart/form-data">
-                    @csrf --}}
+                <form id="multi-step-form" action="{{ route('register') }}" method="POST" enctype="multipart/form-data">
+                    @csrf
                     <div class="bg-white lg:p-12 p-4 rounded-md shadow-primary_shadow">
                         <div class="step" id="step3">
                             <div class="conf_content">
@@ -60,13 +62,13 @@
                             </div>
                         </div>
                     </div>
-                {{-- </form> --}}
+                </form>
             </div>
         </div>
 
     <!-- signup area ends  -->
 
-    {{-- <script>
+    <script>
         let currentStep = 1;
         const form = document.getElementById("multi-step-form");
         const steps = document.querySelectorAll(".step");
@@ -126,11 +128,11 @@
             }
         }
 
-        form.addEventListener("submit", function (event) {
-            event.preventDefault();
-            // Handle form submission here
-            console.log("Form submitted");
-        });
+        // form.addEventListener("submit", function (event) {
+        //     event.preventDefault();
+        //     // Handle form submission here
+        //     console.log("Form submitted");
+        // });
 
         showStep(currentStep);
 
@@ -162,7 +164,24 @@
                 proceedBtn.classList.add("bg-theme_color");
             }
         }
+        function handleFileChange() {
+            console.log(123);
+            var selectedFile = window.event.target.files[0]; // Accessing event indirectly
+            var image = document.getElementById('selectedImage');
 
-    </script> --}}
+            if (selectedFile) {
+                var reader = new FileReader();
+                reader.onload = function(e) {
+                    image.src = e.target.result;
+                    image.style.display = 'block'; // Show the image
+                }
+                reader.readAsDataURL(selectedFile);
+            } else {
+                image.src = '#';
+                image.style.display = 'none'; // Hide the image if no file selected
+            }
+        }
+
+    </script>
   </body>
 </html>
