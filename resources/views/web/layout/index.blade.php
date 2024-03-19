@@ -32,7 +32,7 @@
                 <div class="header_menu flex items-center justify-between gap-10 max-lg:py-3">
                 <div class="logo_area">
                     <a href="{{ route('home') }}">
-                    <img class="w-10" src="{{ asset('assets/web') }}/img/logo/logo.png" alt="" />
+                    <img class="w-10" src="{{ asset('assets/web') }}/img/logo/logo.jpeg" alt="" />
                     </a>
                 </div>
                 <div id="toggle_menu"

@@ -1,8 +1,8 @@
 <?php
 
+use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\web\WebPageController;
-use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,14 +16,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-// Route::get('/', function () {
-//     return view('welcome');
-// });
-//auth routes
-Auth::routes();
-Route::get('post-register', [RegisterController::class, 'postRegister'])->name('post-register');
-
-// Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/', function () {
+    return view('welcome');
+});
 
 Route::controller(WebPageController::class)->group(function(){
     Route::get('/','index')->name('home');
@@ -37,8 +32,13 @@ Route::controller(WebPageController::class)->group(function(){
     Route::get('stories', 'stories')->name('stories');
     Route::get('offer', 'offer')->name('offer');
 });
-// Route::get('/logout', function () {
-//     Auth::logout();
 
-//     return redirect('/');
-// })->name('logout');
+
+
+Route::get('/login', [LoginController::class, 'showLoginForm'])->name('login');
+Route::post('/login', [LoginController::class, 'login']);
+Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
+
+Route::get('/register', [RegisterController::class, 'showRegistrationForm'])->name('register');
+Route::post('/register', [RegisterController::class, 'register']);
+Route::get('post-register', [RegisterController::class, 'postRegister'])->name('post-register');
