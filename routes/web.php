@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\admin\UserController as AdminUserController;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\web\UserController;
@@ -40,7 +41,14 @@ Route::group([
 ], function(){
     Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
     Route::get('post-register', [RegisterController::class, 'postRegister'])->name('post-register');
-    });
+});
+
+Route::group([
+    'middleware' => 'auth',
+    'prefix' => 'admin'
+], function(){
+    Route::get('/user', [AdminUserController::class, 'index'])->name('adminUserIndex');
+});
 
 Route::get('/login', [LoginController::class, 'showLoginForm'])->name('login');
 Route::post('/login', [LoginController::class, 'login']);
