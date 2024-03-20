@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\RegisterController;
+use App\Http\Controllers\web\UserController;
 use App\Http\Controllers\web\WebPageController;
 use Illuminate\Support\Facades\Route;
 
@@ -33,12 +34,17 @@ Route::controller(WebPageController::class)->group(function(){
     Route::get('offer', 'offer')->name('offer');
 });
 
-
+Route::group([
+    'middleware' => 'auth',
+    'prefix' => 'user'
+], function(){
+    Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
+    Route::get('post-register', [RegisterController::class, 'postRegister'])->name('post-register');
+    });
 
 Route::get('/login', [LoginController::class, 'showLoginForm'])->name('login');
 Route::post('/login', [LoginController::class, 'login']);
-Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
 
 Route::get('/register', [RegisterController::class, 'showRegistrationForm'])->name('register');
 Route::post('/register', [RegisterController::class, 'register']);
-Route::get('post-register', [RegisterController::class, 'postRegister'])->name('post-register');
+Route::get('user-dashboard', [UserController::class, 'dashboard'])->name('user-dashboard');
