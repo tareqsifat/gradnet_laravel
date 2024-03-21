@@ -37,5 +37,13 @@ class LoginController extends Controller
         }
     }
 
+    public function logout(){
+        if(Auth::check()){
+            Auth::logout();
+            return redirect()->route('home');
+        }
+        return redirect()->back();
+    }
+
 
 }

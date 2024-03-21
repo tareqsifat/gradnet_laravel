@@ -25,6 +25,56 @@
             .bg-\[url\(\'\/src\/img\/story\/01\.jpg\'\)\]{
                 background-image: url("{{ asset('assets/web') }}/img/story/01.jpg");
             }
+            /* Dropdown container */
+            .dropdown {
+                position: relative;
+                display: inline-block;
+            }
+
+            /* Dropdown button */
+            .dropbtn {
+                background-color: transparent;
+                color: inherit;
+                padding: 0;
+                border: none;
+                cursor: pointer;
+            }
+
+            /* Dropdown content (hidden by default) */
+            .dropdown-content {
+                display: none;
+                position: absolute;
+                background-color: #f9f9f9;
+                min-width: 160px;
+                box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+                z-index: 1;
+            }
+
+            /* Links inside the dropdown */
+            .dropdown-content a {
+                color: black;
+                padding: 12px 16px;
+                text-decoration: none;
+                display: block;
+            }
+
+            /* Change color of dropdown links on hover */
+            .dropdown-content a:hover {
+                background-color: #f1f1f1;
+            }
+
+            /* Show the dropdown menu on hover */
+            .dropbtn:hover + .dropdown-content {
+                display: block;
+            }
+            .dropdown:hover .dropdown-content {
+                display: block;
+            }
+
+            .dropdown-content:hover{
+                display: block;
+            }
+
         </style>
         <!-- header area start -->
         <header class="bg-white border-b border-b-[#d8e2ef] fixed top-0 left-0 w-full z-50">
@@ -96,21 +146,36 @@
                     </li>
                     </ul>
                     <div class="auth_dropdown">
-                        @if (auth()->check())
+                        {{-- @if (auth()->check()) --}}
                             {{-- <span>{{auth()->user()->name}}</span> --}}
-                            <select name="" id="">
+                            {{-- <select name="" id="">
                                 <option value="">{{auth()->user()->name}}</option>
                                 <option value="" class="logout">
                                     <a href="{{ route('logout') }}">
                                         logout
                                     </a>
                                 </option>
-                            </select>
-                        @else
+                            </select> --}}
+                        {{-- @else --}}
                             <button type="button" class="flex items-center gap-1 group">
                                 <span class="text-[#0000008c] text-sm font-medium font-poppins group-hover:text-black transition-all">
-                                    <a href="{{ route('login') }}">Login</a>
+                                    @auth()
+                                        <div class="dropdown">
+                                            <button class="dropbtn">{{ Auth::user()->first_name . ' ' . Auth::user()->last_name }}</button>
+                                            <div class="dropdown-content">
+                                                <a href="{{ route('user-dashboard')}}">User Dashboard</a>
+                                                <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Logout</a>
+                                                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                                    @csrf
+                                                </form>
+                                            </div>
+                                        </div>
+                                    @endauth
+                                    @guest
+                                        <a href="{{ route('login') }}">Login</a>
+                                    @endguest
                                 </span>
+
                                 <i>
                                     <svg xmlns="http://www.w3.org/2000/svg"
                                         viewBox="0 0 24 24"
@@ -121,7 +186,7 @@
                                     </svg>
                                 </i>
                             </button>
-                        @endif
+                        {{-- @endif --}}
                     </div>
                 </div>
                 <div class="lg:hidden">
