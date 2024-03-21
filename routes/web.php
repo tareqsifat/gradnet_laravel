@@ -48,10 +48,11 @@ Route::group([
     'prefix' => 'admin'
 ], function(){
     Route::get('/user', [AdminUserController::class, 'index'])->name('adminUserIndex');
+    Route::get('approve-user/{id}', [AdminUserController::class, 'approve'])->name('approve-user');
 });
 
 Route::get('/login', [LoginController::class, 'showLoginForm'])->name('login');
-Route::post('/login', [LoginController::class, 'login']);
+Route::post('/login', [LoginController::class, 'login'])->name('postLogin');
 
 Route::get('/register', [RegisterController::class, 'showRegistrationForm'])->name('register');
 Route::post('/register', [RegisterController::class, 'register']);
