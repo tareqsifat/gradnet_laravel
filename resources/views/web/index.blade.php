@@ -551,389 +551,194 @@
 
     <!-- member area start -->
     <section class="member_area lg:py-20 py-10 relative">
-      <div class="mian_shape absolute -bottom-16 left-0">
-        <img src="{{ asset('assets/web') }}/img/member/shape/03.png" alt="" />
-      </div>
-      <div class="container mx-auto relative">
-        <div class="member_shape absolute -bottom-10 right-0 md:block hidden">
-          <img src="{{ asset('assets/web') }}/img/member/shape/02.png" alt="" />
+        <div class="mian_shape absolute -bottom-16 left-0">
+            <img src="{{ asset('assets/web') }}/img/member/shape/03.png" alt="" />
         </div>
-        <div class="grid grid-cols-9 gap-5 items-center">
-          <div
-            class="text_content xl:pl-16 max-w-[380px] md:mx-0 mx-auto lg:col-span-4 md:col-span-3 col-span-9 md:order-1 order-2 relative"
-          >
-            <div
-              class="recent_shape absolute -top-[75px] -left-[65px] md:block hidden"
-            >
-              <img src="{{ asset('assets/web') }}/img/member/shape/01.png" alt="" />
+        <div class="container mx-auto relative">
+            <div class="member_shape absolute -bottom-10 right-0 md:block hidden">
+                <img src="{{ asset('assets/web') }}/img/member/shape/02.png" alt="" />
             </div>
-            <h4
-              class="text-[#344050] lg:text-4xl md:text-2xl text-xl font-medium font-poppins"
-            >
-              Recently joined members
-            </h4>
-            <p class="text-[#9da9bb] text-base font-medium font-poppins py-6">
-              Some Forward-Thinking People Like You Already Joined
-            </p>
-            <button
-              type="button"
-              class="bg-theme_color text-white text-sm font-medium font-poppins py-2 px-8 rounded-md flex items-center gap-1"
-            >
-              Join Now
-              <i>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke-width="1.5"
-                  stroke="currentColor"
-                  class="w-4 h-4 text-white"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    d="M8.25 4.5l7.5 7.5-7.5 7.5"
-                  />
-                </svg>
-              </i>
-            </button>
-          </div>
-          <div
-            class="all_member lg:col-span-5 md:col-span-6 col-span-9 max-w-[480px] md:mx-0 mx-auto md:order-2 order-1"
-          >
-            <ul class="flex flex-wrap items-center gap-5">
-              <li>
-                <a
-                  href="#0"
-                  class="inline-block h-24 w-24 rounded-full border-4"
-                >
-                  <img
-                    class="w-full h-full rounded-full"
-                    src="{{ asset('assets/web') }}/img/member/testi-1.jpg"
-                    alt=""
-                  />
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#0"
-                  class="inline-block h-24 w-24 rounded-full border-4"
-                >
-                  <img
-                    class="w-full h-full rounded-full"
-                    src="{{ asset('assets/web') }}/img/member/testi-2.jpg"
-                    alt=""
-                  />
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#0"
-                  class="inline-block h-24 w-24 rounded-full border-4"
-                >
-                  <img
-                    class="w-full h-full rounded-full"
-                    src="{{ asset('assets/web') }}/img/member/testi-3.jpg"
-                    alt=""
-                  />
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#0"
-                  class="inline-block h-24 w-24 rounded-full border-4"
-                >
-                  <img
-                    class="w-full h-full rounded-full"
-                    src="{{ asset('assets/web') }}/img/member/testi-1.jpg"
-                    alt=""
-                  />
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#0"
-                  class="inline-block h-24 w-24 rounded-full border-4"
-                >
-                  <img
-                    class="w-full h-full rounded-full"
-                    src="{{ asset('assets/web') }}/img/member/testi-2.jpg"
-                    alt=""
-                  />
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#0"
-                  class="inline-block h-24 w-24 rounded-full border-4"
-                >
-                  <img
-                    class="w-full h-full rounded-full"
-                    src="{{ asset('assets/web') }}/img/member/testi-3.jpg"
-                    alt=""
-                  />
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#0"
-                  class="inline-block h-24 w-24 rounded-full border-4"
-                >
-                  <img
-                    class="w-full h-full rounded-full"
-                    src="{{ asset('assets/web') }}/img/member/testi-1.jpg"
-                    alt=""
-                  />
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#0"
-                  class="inline-block h-24 w-24 rounded-full border-4"
-                >
-                  <img
-                    class="w-full h-full rounded-full"
-                    src="{{ asset('assets/web') }}/img/member/testi-2.jpg"
-                    alt=""
-                  />
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#0"
-                  class="inline-block h-24 w-24 rounded-full border-4"
-                >
-                  <img
-                    class="w-full h-full rounded-full"
-                    src="{{ asset('assets/web') }}/img/member/testi-1.jpg"
-                    alt=""
-                  />
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#0"
-                  class="inline-block h-24 w-24 rounded-full border-4"
-                >
-                  <img
-                    class="w-full h-full rounded-full"
-                    src="{{ asset('assets/web') }}/img/member/testi-2.jpg"
-                    alt=""
-                  />
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#0"
-                  class="inline-block h-24 w-24 rounded-full border-4"
-                >
-                  <img
-                    class="w-full h-full rounded-full"
-                    src="{{ asset('assets/web') }}/img/member/testi-3.jpg"
-                    alt=""
-                  />
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#0"
-                  class="inline-block h-24 w-24 rounded-full border-4"
-                >
-                  <img
-                    class="w-full h-full rounded-full"
-                    src="{{ asset('assets/web') }}/img/member/testi-1.jpg"
-                    alt=""
-                  />
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#0"
-                  class="inline-block h-24 w-24 rounded-full border-4"
-                >
-                  <img
-                    class="w-full h-full rounded-full"
-                    src="{{ asset('assets/web') }}/img/member/testi-2.jpg"
-                    alt=""
-                  />
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#0"
-                  class="inline-block h-24 w-24 rounded-full border-4"
-                >
-                  <img
-                    class="w-full h-full rounded-full"
-                    src="{{ asset('assets/web') }}/img/member/testi-3.jpg"
-                    alt=""
-                  />
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#0"
-                  class="inline-block h-24 w-24 rounded-full border-4"
-                >
-                  <img
-                    class="w-full h-full rounded-full"
-                    src="{{ asset('assets/web') }}/img/member/testi-1.jpg"
-                    alt=""
-                  />
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#0"
-                  class="inline-block h-24 w-24 rounded-full border-4"
-                >
-                  <img
-                    class="w-full h-full rounded-full"
-                    src="{{ asset('assets/web') }}/img/member/testi-2.jpg"
-                    alt=""
-                  />
-                </a>
-              </li>
-            </ul>
-          </div>
+            <div class="grid grid-cols-9 gap-5 items-center">
+                <div class="text_content xl:pl-16 max-w-[380px] md:mx-0 mx-auto lg:col-span-4 md:col-span-3 col-span-9 md:order-1 order-2 relative">
+                    <div class="recent_shape absolute -top-[75px] -left-[65px] md:block hidden">
+                        <img src="{{ asset('assets/web') }}/img/member/shape/01.png" alt="" />
+                    </div>
+                    <h4 class="text-[#344050] lg:text-4xl md:text-2xl text-xl font-medium font-poppins">
+                        Recently joined members
+                    </h4>
+                    <p class="text-[#9da9bb] text-base font-medium font-poppins py-6">
+                        Some Forward-Thinking People Like You Already Joined
+                    </p>
+                    <button type="button" class="bg-theme_color text-white text-sm font-medium font-poppins py-2 px-8 rounded-md flex items-center gap-1">
+                        Join Now
+                        <i>
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4 text-white">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                            </svg>
+                        </i>
+                    </button>
+                </div>
+                <div class="all_member lg:col-span-5 md:col-span-6 col-span-9 max-w-[480px] md:mx-0 mx-auto md:order-2 order-1">
+                    <ul class="flex flex-wrap items-center gap-5">
+                        <li>
+                            <a href="#0" class="inline-block h-24 w-24 rounded-full border-4">
+                                <img class="w-full h-full rounded-full" src="{{ asset('assets/web') }}/img/member/testi-1.jpg" alt="" />
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#0" class="inline-block h-24 w-24 rounded-full border-4">
+                                <img class="w-full h-full rounded-full" src="{{ asset('assets/web') }}/img/member/testi-2.jpg" alt="" />
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#0" class="inline-block h-24 w-24 rounded-full border-4">
+                                <img class="w-full h-full rounded-full" src="{{ asset('assets/web') }}/img/member/testi-3.jpg" alt="" />
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#0" class="inline-block h-24 w-24 rounded-full border-4">
+                                <img class="w-full h-full rounded-full" src="{{ asset('assets/web') }}/img/member/testi-1.jpg" alt="" />
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#0" class="inline-block h-24 w-24 rounded-full border-4">
+                                <img class="w-full h-full rounded-full" src="{{ asset('assets/web') }}/img/member/testi-2.jpg" alt="" />
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#0" class="inline-block h-24 w-24 rounded-full border-4">
+                                <img class="w-full h-full rounded-full" src="{{ asset('assets/web') }}/img/member/testi-3.jpg" alt="" />
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#0" class="inline-block h-24 w-24 rounded-full border-4">
+                                <img class="w-full h-full rounded-full" src="{{ asset('assets/web') }}/img/member/testi-1.jpg" alt="" />
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#0" class="inline-block h-24 w-24 rounded-full border-4">
+                                <img class="w-full h-full rounded-full" src="{{ asset('assets/web') }}/img/member/testi-2.jpg" alt="" />
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#0" class="inline-block h-24 w-24 rounded-full border-4">
+                                <img class="w-full h-full rounded-full" src="{{ asset('assets/web') }}/img/member/testi-1.jpg" alt="" />
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#0" class="inline-block h-24 w-24 rounded-full border-4">
+                                <img class="w-full h-full rounded-full" src="{{ asset('assets/web') }}/img/member/testi-2.jpg" alt="" />
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#0" class="inline-block h-24 w-24 rounded-full border-4">
+                                <img class="w-full h-full rounded-full" src="{{ asset('assets/web') }}/img/member/testi-3.jpg" alt="" />
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#0" class="inline-block h-24 w-24 rounded-full border-4">
+                                <img class="w-full h-full rounded-full" src="{{ asset('assets/web') }}/img/member/testi-1.jpg" alt="" />
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#0" class="inline-block h-24 w-24 rounded-full border-4">
+                                <img class="w-full h-full rounded-full" src="{{ asset('assets/web') }}/img/member/testi-2.jpg" alt="" />
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#0" class="inline-block h-24 w-24 rounded-full border-4">
+                                <img class="w-full h-full rounded-full" src="{{ asset('assets/web') }}/img/member/testi-3.jpg" alt="" />
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#0" class="inline-block h-24 w-24 rounded-full border-4">
+                                <img class="w-full h-full rounded-full" src="{{ asset('assets/web') }}/img/member/testi-1.jpg" alt="" />
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#0" class="inline-block h-24 w-24 rounded-full border-4">
+                                <img class="w-full h-full rounded-full" src="{{ asset('assets/web') }}/img/member/testi-2.jpg" alt="" />
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </div>
-      </div>
     </section>
+
     <!-- member area ends  -->
 
     <!-- service area start -->
     <section class="service_area lg:py-20 py-10 relative overflow-hidden">
-      <div class="sec_bg absolute left-0 bottom-0 right-0">
-        <img
-          class="w-full"
-          src="{{ asset('assets/web') }}/img/service/service-background-shape.svg"
-          alt=""
-        />
-      </div>
-      <div class="container mx-auto relative">
-        <div class="section_header text-center pb-10">
-          <span
-            class="text-[#9da9bb] md:text-lg text-base font-light font-poppins inline-block"
-            >Still thinking over in?</span
-          >
-          <h3
-            class="text-[#344050] lg:text-4xl md:text-2xl text-xl font-medium font-poppins"
-          >
-            Here us why you should join us
-          </h3>
+        <div class="sec_bg absolute left-0 bottom-0 right-0">
+            <img class="w-full" src="{{ asset('assets/web') }}/img/service/service-background-shape.svg" alt="" />
         </div>
-        <div class="section_wrapper">
-          <div class="grid lg:grid-cols-3 sm:grid-cols-2 gap-5">
-            <div
-              class="why_item bg-white border border-[#b6c1d2] shadow-theme_shadow rounded-lg xl:p-8 lg:p-6 p-5 text-center hover:border-theme_color hover:scale-[1.02] transition-all"
-            >
-              <div class="item_thumb">
-                <img
-                  class="mx-auto"
-                  src="{{ asset('assets/web') }}/img/service/service-image-1.svg"
-                  alt=""
-                />
-              </div>
-              <div class="item_text pt-4">
-                <span
-                  class="bg-theme_color bg-opacity-25 text-theme_color py-[2px] px-2 rounded-3xl inline-block text-xs font-normal font-poppins"
-                  >Reconnect</span
-                >
-                <p
-                  class="text-[#4d5969] md:text-xl text-lg font-medium font-poppins mt-6"
-                >
-                  Reunite with the members of Alumni in a secured, ad-free
-                  online Network.
-                </p>
-              </div>
+        <div class="container mx-auto relative">
+            <div class="section_header text-center pb-10">
+                <span class="text-[#9da9bb] md:text-lg text-base font-light font-poppins inline-block">Still thinking over in?</span>
+                <h3 class="text-[#344050] lg:text-4xl md:text-2xl text-xl font-medium font-poppins">
+                    Here us why you should join us
+                </h3>
             </div>
-            <div
-              class="why_item bg-white border border-[#b6c1d2] shadow-theme_shadow rounded-lg xl:p-8 lg:p-6 p-5 text-center hover:border-theme_color hover:scale-[1.02] transition-all"
-            >
-              <div class="item_thumb">
-                <img
-                  class="mx-auto"
-                  src="{{ asset('assets/web') }}/img/service/service-image-2.svg"
-                  alt=""
-                />
-              </div>
-              <div class="item_text pt-4">
-                <span
-                  class="bg-theme_color bg-opacity-25 text-theme_color py-[2px] px-2 rounded-3xl inline-block text-xs font-normal font-poppins"
-                  >Give Back</span
-                >
-                <p
-                  class="text-[#4d5969] md:text-xl text-lg font-medium font-poppins mt-6"
-                >
-                  Provide help & donation to various causes through fundraising
-                  events.
-                </p>
-              </div>
+            <div class="section_wrapper">
+                <div class="grid lg:grid-cols-3 sm:grid-cols-2 gap-5">
+                    <div class="why_item bg-white border border-[#b6c1d2] shadow-theme_shadow rounded-lg xl:p-8 lg:p-6 p-5 text-center hover:border-theme_color hover:scale-[1.02] transition-all">
+                        <div class="item_thumb">
+                            <img class="mx-auto" src="{{ asset('assets/web') }}/img/service/service-image-1.svg" alt="" />
+                        </div>
+                        <div class="item_text pt-4">
+                            <span class="bg-theme_color bg-opacity-25 text-theme_color py-[2px] px-2 rounded-3xl inline-block text-xs font-normal font-poppins">Reconnect</span>
+                            <p class="text-[#4d5969] md:text-xl text-lg font-medium font-poppins mt-6">
+                                Reunite with the members of Alumni in a secured, ad-free online Network.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="why_item bg-white border border-[#b6c1d2] shadow-theme_shadow rounded-lg xl:p-8 lg:p-6 p-5 text-center hover:border-theme_color hover:scale-[1.02] transition-all">
+                        <div class="item_thumb">
+                            <img class="mx-auto" src="{{ asset('assets/web') }}/img/service/service-image-2.svg" alt="" />
+                        </div>
+                        <div class="item_text pt-4">
+                            <span class="bg-theme_color bg-opacity-25 text-theme_color py-[2px] px-2 rounded-3xl inline-block text-xs font-normal font-poppins">Give Back</span>
+                            <p class="text-[#4d5969] md:text-xl text-lg font-medium font-poppins mt-6">
+                                Provide help & donation to various causes through fundraising events.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="why_item bg-white border border-[#b6c1d2] shadow-theme_shadow rounded-lg xl:p-8 lg:p-6 p-5 text-center hover:border-theme_color hover:scale-[1.02] transition-all">
+                        <div class="item_thumb">
+                            <img class="mx-auto" src="{{ asset('assets/web') }}/img/service/service-image-3.svg" alt="" />
+                        </div>
+                        <div class="item_text pt-4">
+                            <span class="bg-theme_color bg-opacity-25 text-theme_color py-[2px] px-2 rounded-3xl inline-block text-xs font-normal font-poppins">Advance</span>
+                            <p class="text-[#4d5969] md:text-xl text-lg font-medium font-poppins mt-6">
+                                Evolve in your career, post a job, and look for opportunities in your network.
+                            </p>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div
-              class="why_item bg-white border border-[#b6c1d2] shadow-theme_shadow rounded-lg xl:p-8 lg:p-6 p-5 text-center hover:border-theme_color hover:scale-[1.02] transition-all"
-            >
-              <div class="item_thumb">
-                <img
-                  class="mx-auto"
-                  src="{{ asset('assets/web') }}/img/service/service-image-3.svg"
-                  alt=""
-                />
-              </div>
-              <div class="item_text pt-4">
-                <span
-                  class="bg-theme_color bg-opacity-25 text-theme_color py-[2px] px-2 rounded-3xl inline-block text-xs font-normal font-poppins"
-                  >Advance</span
-                >
-                <p
-                  class="text-[#4d5969] md:text-xl text-lg font-medium font-poppins mt-6"
-                >
-                  Evolve in your career, post a job, and look for opportunities
-                  in your network.
-                </p>
-              </div>
-            </div>
-          </div>
         </div>
-      </div>
     </section>
+
     <!-- service area ends  -->
 
     <!-- media area start -->
-    <section
-      class="media_area lg:py-24 py-16 bg-[url('/src/img/media/bg-2.png')] bg-center w-full min-h-full overflow-hidden will-change-transform bg-no-repeat"
-    >
-      <div class="container mx-auto">
-        <div class="section-wrapper max-w-[1080px] mx-auto text-center">
-          <h3
-            class="text-[#f9fafd] lg:text-4xl lg:leading-normal md:text-2xl md:leading-normal text-xl leading-normal font-medium font-poppins"
-          >
-            Join today Alumni Association. Build your network, reunite with
-            everyone from your Department. Grow & evolve in your career with us.
-          </h3>
-          <button
-            type="button"
-            class="bg-[#f9fafd] mx-auto mt-10 text-theme_color py-3 px-8 text-sm font-medium font-poppins rounded-md flex items-center justify-center gap-1"
-          >
-            Sign up now
-            <i>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke-width="1.5"
-                stroke="currentColor"
-                class="w-4 h-4 text-theme_color"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="M8.25 4.5l7.5 7.5-7.5 7.5"
-                />
-              </svg>
-            </i>
-          </button>
+    <section class="media_area lg:py-24 py-16 bg-[url('/src/img/media/bg-2.png')] bg-center w-full min-h-full overflow-hidden will-change-transform bg-no-repeat">
+        <div class="container mx-auto">
+            <div class="section-wrapper max-w-[1080px] mx-auto text-center">
+                <h3 class="text-[#f9fafd] lg:text-4xl lg:leading-normal md:text-2xl md:leading-normal text-xl leading-normal font-medium font-poppins">
+                    Join today Alumni Association. Build your network, reunite with everyone from your Department. Grow & evolve in your career with us.
+                </h3>
+                <button type="button" class="bg-[#f9fafd] mx-auto mt-10 text-theme_color py-3 px-8 text-sm font-medium font-poppins rounded-md flex items-center justify-center gap-1">
+                    Sign up now
+                    <i>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4 text-theme_color">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                        </svg>
+                    </i>
+                </button>
+            </div>
         </div>
-      </div>
     </section>
+
 @endsection
