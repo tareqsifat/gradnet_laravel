@@ -4,9 +4,12 @@
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <!-- style  -->
+        <!-- Style -->
         <link rel="stylesheet" href="{{ asset('assets/web') }}/css/custom.css" />
-        <title>Gradnet</title>
+        <!-- Title -->
+        <title>DCS Alumni</title>
+        <!-- Favicon -->
+        <link rel="icon" type="image/png" href="{{ asset('assets/web/img/logo/icon-title.png') }}">
     </head>
     <body>
         <style>
