@@ -109,11 +109,11 @@
                         Committee
                         </a>
                     </li>
-                    <li>
+                    {{-- <li>
                         <a href="{{ route('business') }}"
                         class="text-[#0000008c] text-opacity-80 text-[13.5px] lg:py-6 py-1 inline-block font font-semibold font-poppins hover:text-black transition-all"
                         >Businesses</a>
-                    </li>
+                    </li> --}}
                     <li>
                         <a href="{{ route('directories') }}"
                         class="text-[#0000008c] text-opacity-80 text-[13.5px] lg:py-6 py-1 inline-block font font-semibold font-poppins hover:text-black transition-all">
@@ -129,7 +129,7 @@
                     <li>
                         <a href="{{ route('news') }}"
                         class="text-[#0000008c] text-opacity-80 text-[13.5px] lg:py-6 py-1 inline-block font font-semibold font-poppins hover:text-black transition-all">
-                        News
+                        Notice Board
                         </a
                         >
                     </li>
@@ -144,7 +144,7 @@
                         <a
                         href="{{ route('offer') }}"
                         class="text-[#0000008c] text-opacity-80 text-[13.5px] lg:py-6 py-1 inline-block font font-semibold font-poppins hover:text-black transition-all"
-                        >Offer</a
+                        >Offers</a
                         >
                     </li>
                     </ul>

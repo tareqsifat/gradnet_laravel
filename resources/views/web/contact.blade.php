@@ -9,20 +9,20 @@
                         Contact
                     </h4>
                     <p class="text-[#5e6e82] text-xl font-light font-poppins">
-                        IUT Alumni Association
+                        Dhaka Collegiate School Alumni Association
                     </p>
                 </div>
                 <div class="text_content text-[#5e6e82] text-base leading-normal font-light font-poppins text-center pt-10">
                     <h4 class="font-semibold">Dr. Nazmul Arefin Momel</h4>
                     <p>President,</p>
-                    <p>IUT Alumni Association</p>
-                    <p>president@iutaa.com</p>
+                    <p>Dhaka Collegiate School Alumni Association</p>
+                    <p>president@dcsa.com</p>
                 </div>
                 <div class="text_content text-[#5e6e82] text-base leading-normal font-light font-poppins text-center pt-7">
                     <h4 class="font-semibold">Dr. Nazmul Arefin Momel</h4>
-                    <p>President,</p>
-                    <p>IUT Alumni Association</p>
-                    <p>president@iutaa.com</p>
+                    <p>Vice President,</p>
+                    <p>Dhaka Collegiate School Alumni Association</p>
+                    <p>president@dcsa.com</p>
                 </div>
             </div>
         </div>

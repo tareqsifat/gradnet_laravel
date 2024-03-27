@@ -18,27 +18,33 @@
                             </p>
                         </div>
                         <div class="grid grid-cols-2 md:gap-5 gap-4 mt-4">
-                            <div class="input_group">
-                                <label for="email" class="text-text_color text-sm font-normal font-poppins mb-1 inline-block">Email</label>
-                                <input type="email" class="border border-border_color border-opacity-50 h-11 rounded-md p-2 w-full focus-visible:border-theme_color focus-visible:outline-none" />
-                            </div>
-                            <div class="input_group">
-                                <label for="password" class="text-text_color text-sm font-normal font-poppins mb-1 inline-block">Password</label>
-                                <input type="password" class="border border-border_color border-opacity-50 h-11 rounded-md p-2 w-full focus-visible:border-theme_color focus-visible:outline-none" />
-                            </div>
+                            <form action="{{ route('postLogin') }}" method="POST" style="grid-column: span 2;">
+                                @csrf
+                                <div class="input_group">
+                                    <label for="email" class="text-text_color text-sm font-normal font-poppins mb-1 inline-block">Email</label>
+                                    <input type="email" class="border border-border_color border-opacity-50 h-11 rounded-md p-2 w-full focus-visible:border-theme_color focus-visible:outline-none" />
+                                </div>
+                                <div class="input_group" style="margin-bottom: 0.5rem">
+                                    <label for="password" class="text-text_color text-sm font-normal font-poppins mb-1 inline-block">Password</label>
+                                    <input type="password" class="border border-border_color border-opacity-50 h-11 rounded-md p-2 w-full focus-visible:border-theme_color focus-visible:outline-none" />
+                                </div>
+                                <div class="input_btn col-span-2">
+                                    <button type="submit" class="bg-theme_color py-3 px-6 text-white text-center text-sm font-medium font-poppins rounded-md w-full">
+                                        Login
+                                    </button>
+                                </div>
+
+                            </form>
                             <div class="input_btn col-span-2">
-                                <button type="submit" class="bg-theme_color py-3 px-6 text-white text-center text-sm font-medium font-poppins rounded-md w-full">
-                                    Login
-                                </button>
                                 <a href="#0" class="text-theme_color text-xs font-light font-poppins inline-block mt-2">Forgot password</a>
-                                <button type="button" class="bg-theme_color bg-opacity-10 text-theme_color py-3 px-6 rounded-md text-sm font-medium font-poppins w-full flex items-center justify-center gap-2 mt-4">
+                                <a type="button" href="{{route('register') }}" class="bg-theme_color bg-opacity-10 text-theme_color py-3 px-6 rounded-md text-sm font-medium font-poppins w-full flex items-center justify-center gap-2 mt-4">
                                     Create an account
                                     <i>
                                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-[14px] h-[14px] text-theme_color">
                                             <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
                                         </svg>
                                     </i>
-                                </button>
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -498,6 +504,7 @@
             </div>
         </div>
     </section>
+
     <!-- news blog area ends  -->
 
     <!-- story area start -->
@@ -545,6 +552,7 @@
             </div>
         </div>
     </section>
+
     <!-- story area ends  -->
 
     <!-- member area start -->
@@ -663,6 +671,7 @@
             </div>
         </div>
     </section>
+
     <!-- member area ends  -->
 
     <!-- service area start -->
@@ -716,6 +725,7 @@
             </div>
         </div>
     </section>
+
     <!-- service area ends  -->
 
     <!-- media area start -->

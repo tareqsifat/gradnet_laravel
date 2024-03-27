@@ -7,7 +7,7 @@
                 <div class="card_bar">
                     <div class="card_nav director_nav flex flex-wrap items-center gap-4">
                         <button type="button" id="tab1-link" class="tab_link text-sm font-medium font-poppins shadow-bmpshadow rounded-md px-4 py-2 active" onclick="changeTab(0)">
-                            Find a person
+                            Find an Alumni
                         </button>
                         <button type="button" id="tab2-link" class="tab_link text-sm font-medium font-poppins shadow-bmpshadow rounded-md px-4 py-2" onclick="changeTab(1)">
                             Knowledge Archive
@@ -23,79 +23,25 @@
                                     <div class="flex items-center justify-between gap-2 w-[150px]">
                                         <select class="text-text_color text-sm font-normal font-poppins focus:outline-none h-8 w-full">
                                             <option value="0">Name</option>
-                                            <option value="1">Company</option>
-                                            <option value="2">Designation</option>
+                                            <option value="1">Batch</option>
                                         </select>
                                     </div>
                                     <input type="text" class="w-full h-8 border-0 pl-4 p-2 text-sm font-light font-poppins text-text_color placeholder:text-opacity-30 focus:outline-none" placeholder="Type to search" />
                                 </div>
                                 <div class="grid lg:grid-cols-6 md:grid-cols-4 sm:grid-cols-3 grid-cols-2 gap-8">
-                                    <div class="person_item text-center">
-                                        <div class="item_thumb w-[100px] h-[100px] mx-auto rounded-full">
-                                            <img class="w-full rounded-full" src="../src/img/member/testi-1.jpg" alt="" />
+                                    @foreach ($users as $user)
+                                        <div class="person_item text-center">
+                                            <div class="item_thumb w-[100px] h-[100px] mx-auto rounded-full">
+                                                <img class="w-full rounded-full" src="{{ asset('assets/web/img/member/testi-1.jpg')}}" alt="" />
+                                            </div>
+                                            <div class="item_text">
+                                                <h4 class="text-text_color text-base font-medium font-poppins">
+                                                    {{$user->first_name ?? $user->first_name }} {{$user->last_name ?? $user->last_name }}
+                                                </h4>
+                                                <a href="#0" class="text-theme_color text-sm font-medium font-poppins inline-block">View profile</a>
+                                            </div>
                                         </div>
-                                        <div class="item_text">
-                                            <h4 class="text-text_color text-base font-medium font-poppins">
-                                                Md. Sayem
-                                            </h4>
-                                            <a href="#0" class="text-theme_color text-sm font-medium font-poppins inline-block">View profile</a>
-                                        </div>
-                                    </div>
-                                    <div class="person_item text-center">
-                                        <div class="item_thumb w-[100px] h-[100px] mx-auto rounded-full">
-                                            <img class="w-full rounded-full" src="../src/img/member/testi-2.jpg" alt="" />
-                                        </div>
-                                        <div class="item_text">
-                                            <h4 class="text-text_color text-base font-medium font-poppins">
-                                                Md. Monir
-                                            </h4>
-                                            <a href="#0" class="text-theme_color text-sm font-medium font-poppins inline-block">View profile</a>
-                                        </div>
-                                    </div>
-                                    <div class="person_item text-center">
-                                        <div class="item_thumb w-[100px] h-[100px] mx-auto rounded-full">
-                                            <img class="w-full rounded-full" src="../src/img/member/testi-3.jpg" alt="" />
-                                        </div>
-                                        <div class="item_text">
-                                            <h4 class="text-text_color text-base font-medium font-poppins">
-                                                Mr. DevOps
-                                            </h4>
-                                            <a href="#0" class="text-theme_color text-sm font-medium font-poppins inline-block">View profile</a>
-                                        </div>
-                                    </div>
-                                    <div class="person_item text-center">
-                                        <div class="item_thumb w-[100px] h-[100px] mx-auto rounded-full">
-                                            <img class="w-full rounded-full" src="../src/img/member/testi-1.jpg" alt="" />
-                                        </div>
-                                        <div class="item_text">
-                                            <h4 class="text-text_color text-base font-medium font-poppins">
-                                                Md. Sayem
-                                            </h4>
-                                            <a href="#0" class="text-theme_color text-sm font-medium font-poppins inline-block">View profile</a>
-                                        </div>
-                                    </div>
-                                    <div class="person_item text-center">
-                                        <div class="item_thumb w-[100px] h-[100px] mx-auto rounded-full">
-                                            <img class="w-full rounded-full" src="../src/img/member/testi-2.jpg" alt="" />
-                                        </div>
-                                        <div class="item_text">
-                                            <h4 class="text-text_color text-base font-medium font-poppins">
-                                                Md. Monir
-                                            </h4>
-                                            <a href="#0" class="text-theme_color text-sm font-medium font-poppins inline-block">View profile</a>
-                                        </div>
-                                    </div>
-                                    <div class="person_item text-center">
-                                        <div class="item_thumb w-[100px] h-[100px] mx-auto rounded-full">
-                                            <img class="w-full rounded-full" src="../src/img/member/testi-3.jpg" alt="" />
-                                        </div>
-                                        <div class="item_text">
-                                            <h4 class="text-text_color text-base font-medium font-poppins">
-                                                Mr. DevOps
-                                            </h4>
-                                            <a href="#0" class="text-theme_color text-sm font-medium font-poppins inline-block">View profile</a>
-                                        </div>
-                                    </div>
+                                    @endforeach
                                 </div>
                                 <div class="mt-12">
                                     <div class="show_pages bg-white shadow-theme_shadow p-4 rounded-lg flex flex-wrap items-center justify-between gap-3">
