@@ -25,10 +25,10 @@
                         </div>
                         <div class="member_menu flex flex-col h-full">
                             <button type="button" class="bg-theme_color text-left bg-opacity-10 text-theme_color p-2 text-base font-normal font-poppins">
-                                Executive Committee
+                                Advisory Committee
                             </button>
                             <button type="button" class="text-left text-text_color p-2 text-base font-normal font-poppins">
-                                Finance Committee
+                                Executive committee
                             </button>
                         </div>
                         <div class="border-t flex flex-wrap items-center justify-between p-3 gap-4">

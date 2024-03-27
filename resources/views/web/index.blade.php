@@ -18,18 +18,24 @@
                             </p>
                         </div>
                         <div class="grid grid-cols-2 md:gap-5 gap-4 mt-4">
-                            <div class="input_group">
-                                <label for="email" class="text-text_color text-sm font-normal font-poppins mb-1 inline-block">Email</label>
-                                <input type="email" class="border border-border_color border-opacity-50 h-11 rounded-md p-2 w-full focus-visible:border-theme_color focus-visible:outline-none" />
-                            </div>
-                            <div class="input_group">
-                                <label for="password" class="text-text_color text-sm font-normal font-poppins mb-1 inline-block">Password</label>
-                                <input type="password" class="border border-border_color border-opacity-50 h-11 rounded-md p-2 w-full focus-visible:border-theme_color focus-visible:outline-none" />
-                            </div>
+                            <form action="{{ route('postLogin') }}" method="POST" style="grid-column: span 2;">
+                                @csrf
+                                <div class="input_group">
+                                    <label for="email" class="text-text_color text-sm font-normal font-poppins mb-1 inline-block">Email</label>
+                                    <input type="email" class="border border-border_color border-opacity-50 h-11 rounded-md p-2 w-full focus-visible:border-theme_color focus-visible:outline-none" />
+                                </div>
+                                <div class="input_group" style="margin-bottom: 0.5rem">
+                                    <label for="password" class="text-text_color text-sm font-normal font-poppins mb-1 inline-block">Password</label>
+                                    <input type="password" class="border border-border_color border-opacity-50 h-11 rounded-md p-2 w-full focus-visible:border-theme_color focus-visible:outline-none" />
+                                </div>
+                                <div class="input_btn col-span-2">
+                                    <button type="submit" class="bg-theme_color py-3 px-6 text-white text-center text-sm font-medium font-poppins rounded-md w-full">
+                                        Login
+                                    </button>
+                                </div>
+
+                            </form>
                             <div class="input_btn col-span-2">
-                                <button type="button" class="bg-theme_color py-3 px-6 text-white text-center text-sm font-medium font-poppins rounded-md w-full">
-                                    Login
-                                </button>
                                 <a href="#0" class="text-theme_color text-xs font-light font-poppins inline-block mt-2">Forgot password</a>
                                 <a type="button" href="{{route('register') }}" class="bg-theme_color bg-opacity-10 text-theme_color py-3 px-6 rounded-md text-sm font-medium font-poppins w-full flex items-center justify-center gap-2 mt-4">
                                     Create an account

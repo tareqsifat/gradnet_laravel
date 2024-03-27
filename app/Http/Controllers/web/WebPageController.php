@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\web;
 
 use App\Http\Controllers\Controller;
+use App\Models\User;
 use Illuminate\Http\Request;
 
 class WebPageController extends Controller
@@ -29,7 +30,8 @@ class WebPageController extends Controller
     }
     public function directories()
     {
-        return view('web.directories');
+        $users = User::where('is_approved', 1)->get();
+        return view('web.directories', compact('users'));
     }
     public function articles()
     {

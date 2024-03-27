@@ -4,9 +4,12 @@
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <!-- style  -->
+        <!-- Style -->
         <link rel="stylesheet" href="{{ asset('assets/web') }}/css/custom.css" />
-        <title>Gradnet</title>
+        <!-- Title -->
+        <title>DCS Alumni</title>
+        <!-- Favicon -->
+        <link rel="icon" type="image/png" href="{{ asset('assets/web/img/logo/icon-title.png') }}">
     </head>
     <body>
         <style>
@@ -106,11 +109,11 @@
                         Committee
                         </a>
                     </li>
-                    <li>
+                    {{-- <li>
                         <a href="{{ route('business') }}"
                         class="text-[#0000008c] text-opacity-80 text-[13.5px] lg:py-6 py-1 inline-block font font-semibold font-poppins hover:text-black transition-all"
                         >Businesses</a>
-                    </li>
+                    </li> --}}
                     <li>
                         <a href="{{ route('directories') }}"
                         class="text-[#0000008c] text-opacity-80 text-[13.5px] lg:py-6 py-1 inline-block font font-semibold font-poppins hover:text-black transition-all">
@@ -126,7 +129,7 @@
                     <li>
                         <a href="{{ route('news') }}"
                         class="text-[#0000008c] text-opacity-80 text-[13.5px] lg:py-6 py-1 inline-block font font-semibold font-poppins hover:text-black transition-all">
-                        News
+                        Notice Board
                         </a
                         >
                     </li>
@@ -141,7 +144,7 @@
                         <a
                         href="{{ route('offer') }}"
                         class="text-[#0000008c] text-opacity-80 text-[13.5px] lg:py-6 py-1 inline-block font font-semibold font-poppins hover:text-black transition-all"
-                        >Offer</a
+                        >Offers</a
                         >
                     </li>
                     </ul>
