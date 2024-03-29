@@ -129,7 +129,7 @@
                     <li>
                         <a href="{{ route('news') }}"
                         class="text-[#0000008c] text-opacity-80 text-[13.5px] lg:py-6 py-1 inline-block font font-semibold font-poppins hover:text-black transition-all">
-                        Notice Board
+                        News & Notice
                         </a
                         >
                     </li>

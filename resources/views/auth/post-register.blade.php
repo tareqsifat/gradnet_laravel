@@ -57,7 +57,7 @@
                                 </div>
                             </div>
                             <div class="flex items-center justify-center gap-3 pt-12">
-                                <a href="index.html" class="bg-theme_color text-white rounded-md py-2 px-4 text-sm font-normal font-poppins">Back To login</a>
+                                <a href="{{route('login')}}" class="bg-theme_color text-white rounded-md py-2 px-4 text-sm font-normal font-poppins">Back To login</a>
                             </div>
                         </div>
                     </div>

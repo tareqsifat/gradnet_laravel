@@ -615,15 +615,15 @@
                             <div class="d-flex align-items-center">
                                 <button aria-label="Toggle navigation" type="button" class="mb-0 mr-3 outline-none navbar-toggler" style="margin-bottom: 1rem;"><span class="navbar-toggler-icon"></span></button>
                                 <div class="text-sans-serif text-left navbar-brand entity-dropdown w-50 w-md-auto dropdown">
-                                    <button
+                                    <a href="{{route('home')}}"
                                         type="button"
                                         aria-haspopup="true"
                                         aria-expanded="false"
                                         class="btn bg-transparent border-0 p-0 font-weight-semi-bold text-700 outline-none d-flex align-items-center dropdown-toggle btn btn-secondary"
                                     >
-                                        <img class="rounded img-fluid" src="{{asset('assets/web/user-dashboard')}}/bvVouKjzUXUI03r0tZfGRCowl0acDMojI2jlua39.png" alt="Entity" style="box-shadow: white 0px 0px 0px 1px; height: 42px;" />
+                                        <img class="rounded img-fluid" src="{{asset('assets/web/img/logo/logo.jpeg')}}" alt="Entity" style="box-shadow: white 0px 0px 0px 1px; height: 42px;" />
                                         <div class="entity-label d-none d-md-block fs--1 ml-2 font-weight-medium text-900">Alumni Association</div>
-                                    </button>
+                                    </a>
                                     <div tabindex="-1" role="menu" aria-hidden="true" class="py-0 dropdown-menu-accounts dropdown-menu">
                                         <div class="bg-white rounded-soft py-2">
                                             <a href="https://demo.gradnet.xyz/" tabindex="0" role="menuitem" class="bg-200 dropdown-item">Alumni Association</a>
@@ -646,16 +646,7 @@
                                 <ul class="ml-auto align-items-center flex-row navbar-nav">
                                     <li class="nav-item">
                                         <a class="p-2 nav-link" href="https://demo.gradnet.xyz/directory">
-                                            <svg
-                                                aria-hidden="true"
-                                                focusable="false"
-                                                data-prefix="fas"
-                                                data-icon="address-book"
-                                                class="svg-inline--fa fa-address-book fa-w-14"
-                                                role="img"
-                                                xmlns="http://www.w3.org/2000/svg"
-                                                viewBox="0 0 448 512"
-                                            >
+                                            <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="address-book" class="svg-inline--fa fa-address-book fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
                                                 <path
                                                     fill="currentColor"
                                                     d="M436 160c6.6 0 12-5.4 12-12v-40c0-6.6-5.4-12-12-12h-20V48c0-26.5-21.5-48-48-48H48C21.5 0 0 21.5 0 48v416c0 26.5 21.5 48 48 48h320c26.5 0 48-21.5 48-48v-48h20c6.6 0 12-5.4 12-12v-40c0-6.6-5.4-12-12-12h-20v-64h20c6.6 0 12-5.4 12-12v-40c0-6.6-5.4-12-12-12h-20v-64h20zm-228-32c35.3 0 64 28.7 64 64s-28.7 64-64 64-64-28.7-64-64 28.7-64 64-64zm112 236.8c0 10.6-10 19.2-22.4 19.2H118.4C106 384 96 375.4 96 364.8v-19.2c0-31.8 30.1-57.6 67.2-57.6h5c12.3 5.1 25.7 8 39.8 8s27.6-2.9 39.8-8h5c37.1 0 67.2 25.8 67.2 57.6v19.2z"
@@ -769,6 +760,7 @@
             </main>
             <div class="Toastify"></div>
         </div>
-
     </body>
+
+
 </html>

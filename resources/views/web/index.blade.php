@@ -22,11 +22,11 @@
                                 @csrf
                                 <div class="input_group">
                                     <label for="email" class="text-text_color text-sm font-normal font-poppins mb-1 inline-block">Email</label>
-                                    <input type="email" class="border border-border_color border-opacity-50 h-11 rounded-md p-2 w-full focus-visible:border-theme_color focus-visible:outline-none" />
+                                    <input type="email" name="email" class="border border-border_color border-opacity-50 h-11 rounded-md p-2 w-full focus-visible:border-theme_color focus-visible:outline-none" />
                                 </div>
                                 <div class="input_group" style="margin-bottom: 0.5rem">
                                     <label for="password" class="text-text_color text-sm font-normal font-poppins mb-1 inline-block">Password</label>
-                                    <input type="password" class="border border-border_color border-opacity-50 h-11 rounded-md p-2 w-full focus-visible:border-theme_color focus-visible:outline-none" />
+                                    <input type="password" name="password" class="border border-border_color border-opacity-50 h-11 rounded-md p-2 w-full focus-visible:border-theme_color focus-visible:outline-none" />
                                 </div>
                                 <div class="input_btn col-span-2">
                                     <button type="submit" class="bg-theme_color py-3 px-6 text-white text-center text-sm font-medium font-poppins rounded-md w-full">
@@ -387,14 +387,14 @@
                                 <span class="text-[#9da9bb] text-sm font-medium font-poppins">Initiatives</span>
                             </li>
                         </ul>
-                        <button type="button" class="bg-theme_color py-3 px-4 rounded-md text-white text-sm font-medium font-poppins flex items-center justify-center gap-2 w-full">
+                        <a type="button" href="{{route('register')}}" class="bg-theme_color py-3 px-4 rounded-md text-white text-sm font-medium font-poppins flex items-center justify-center gap-2 w-full">
                             Join your community
                             <i>
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5 text-white">
                                     <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
                                 </svg>
                             </i>
-                        </button>
+                        </a>
                     </div>
                 </div>
                 <div class="md:col-span-5 col-span-2 md:order-2 order-1">
@@ -575,14 +575,16 @@
                     <p class="text-[#9da9bb] text-base font-medium font-poppins py-6">
                         Some Forward-Thinking People Like You Already Joined
                     </p>
-                    <button type="button" class="bg-theme_color text-white text-sm font-medium font-poppins py-2 px-8 rounded-md flex items-center gap-1">
-                        Join Now
-                        <i>
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4 text-white">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
-                            </svg>
-                        </i>
-                    </button>
+                    <a href="{{route('register')}}">
+                        <button type="button" class="bg-theme_color text-white text-sm font-medium font-poppins py-2 px-8 rounded-md flex items-center gap-1">
+                            Join Now
+                            <i>
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4 text-white">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                                </svg>
+                            </i>
+                        </button>
+                    </a>
                 </div>
                 <div class="all_member lg:col-span-5 md:col-span-6 col-span-9 max-w-[480px] md:mx-0 mx-auto md:order-2 order-1">
                     <ul class="flex flex-wrap items-center gap-5">
@@ -735,14 +737,16 @@
                 <h3 class="text-[#f9fafd] lg:text-4xl lg:leading-normal md:text-2xl md:leading-normal text-xl leading-normal font-medium font-poppins">
                     Join today Alumni Association. Build your network, reunite with everyone from your Department. Grow & evolve in your career with us.
                 </h3>
-                <button type="button" class="bg-[#f9fafd] mx-auto mt-10 text-theme_color py-3 px-8 text-sm font-medium font-poppins rounded-md flex items-center justify-center gap-1">
-                    Sign up now
-                    <i>
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4 text-theme_color">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
-                        </svg>
-                    </i>
-                </button>
+                <a href="{{route('register')}}">
+                    <button type="button" class="bg-[#f9fafd] mx-auto mt-10 text-theme_color py-3 px-8 text-sm font-medium font-poppins rounded-md flex items-center justify-center gap-1">
+                        Sign up now
+                        <i>
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4 text-theme_color">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                            </svg>
+                        </i>
+                    </button>
+                </a>
             </div>
         </div>
     </section>

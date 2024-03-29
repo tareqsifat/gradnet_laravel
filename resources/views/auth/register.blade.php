@@ -14,7 +14,7 @@
             <!-- logo area -->
             <div class="logo_area flex flex-col items-center gap-3 pb-10">
                 <a href="index.html">
-                    <img src="{{ asset('assets/web') }}/img/logo/logo.png" class="w-[50px] h-10" alt="" />
+                    <img src="{{ asset('assets/web/img/logo/logo.jpeg') }}" class="w-[50px]" alt="" />
                 </a>
                 <div id="step-count" class="text-text_color text-base font-semibold font-poppins leading-normal">
                     Step 1/3
@@ -24,9 +24,9 @@
             <!-- account area -->
             <div class="flex flex-col gap-5">
                 <div class="bg-[#fff0d0] text-[#855d0b] p-4 rounded-md text-base font-normal font-poppins leading-normal text-left">
-                    <p> Only
-                        <span class="font-semibold">Alumni Association</span>
-                        members and eligible people are entitled to create an account or sign up here
+                    <p> Only Alumni of
+                        <span class="font-semibold">Dhaka Collegiate School</span>
+                        are entitled to create an account or sign up here
                     </p>
                 </div>
                 <form id="multi-step-form" action="{{ route('register') }}" method="POST" enctype="multipart/form-data">
@@ -39,21 +39,10 @@
                                 </h4>
                                 <div class="flex items-center gap-1 text-xs font-light font-poppins">
                                     <span class="text-[#748194]">Or</span>
-                                    <a href="#0" class="text-theme_color">login</a>
+                                    <a href="{{route('login')}}" class="text-theme_color">login</a>
                                 </div>
                             </div>
                             <div class="mt-4 text-sm text-[#5e6e82] font-normal font-poppins">
-                                <span>You are signing up as -</span>
-                                <div class="flex items-center gap-3 mt-2 pb-6">
-                                    <button type="button" class="border border-border_color border-opacity-25 rounded-md flex items-center gap-2 w-full px-2">
-                                        <input id="default-radio-1" type="radio" value="" name="default-radio" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 focus:ring-0" />
-                                        <label for="default-radio-1" class="text-sm text-text_colors text-opacity-70 font-normal w-[calc(100%_-_24px)] text-left py-2">SUST Member</label>
-                                    </button>
-                                    <button type="button" class="border border-border_color border-opacity-25 rounded-md flex items-center gap-2 w-full px-2">
-                                        <input checked id="default-radio-2" type="radio" value="" name="default-radio" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 focus:ring-0" />
-                                        <label for="default-radio-2" class="text-sm text-text_colors text-opacity-70 font-normal w-[calc(100%_-_24px)] text-left py-2">SUST Student</label>
-                                    </button>
-                                </div>
                                 <div class="grid grid-cols-4 gap-5 pt-5 border-t">
                                     <div class="md:col-span-1">
                                         <div class="user_thumb">
@@ -797,26 +786,16 @@
                                 More Information
                             </h4>
                             <div class="grid grid-cols-4 gap-5 pt-5 border-t">
-                                <div class="input_group col-span-4">
-                                    <label for="" class="inline-block pb-1 text-sm text-black text-opacity-50 font-normal font-poppins">membership type</label>
-                                    <select name="member_type" class="text-black font-normal font-poppins w-full border h-10 rounded-md p-2 focus:outline-none focus:border-theme_color" aria-invalid="false">
-                                        <option value="associate">Associate</option>
-                                        <option value="full_member">Full Member</option>
-                                    </select>
-                                    @error('member_type')
-                                        <span style="color: #f00;">{{ $message }}</span>
-                                    @enderror
-                                </div>
                                 <div class="input_group sm:col-span-2">
                                     <label for="ssc_roll" class="inline-block pb-1 text-sm text-black text-opacity-50 font-normal font-poppins">SSC Roll Number</label>
-                                    <input type="text" id="ssc_roll" name="ssc_roll" placeholder="" class="border rounded-md h-10 w-full p-2 text-sm font-light font-poppins text-text_colors focus:outline-none focus:border-theme_color" />
+                                    <input type="text" id="ssc_roll" name="ssc_roll" placeholder="" required class="border rounded-md h-10 w-full p-2 text-sm font-light font-poppins text-text_colors focus:outline-none focus:border-theme_color" />
                                     @error('ssc_roll')
                                         <span style="color: #f00;">{{ $message }}</span>
                                     @enderror
                                 </div>
                                 <div class="input_group sm:col-span-2">
                                     <label for="ssc_reg" class="inline-block pb-1 text-sm text-black text-opacity-50 font-normal font-poppins">SSC Registration No</label>
-                                    <input type="text" id="ssc_reg" name="ssc_reg" placeholder="" class="border rounded-md h-10 w-full p-2 text-sm font-light font-poppins text-text_colors focus:outline-none focus:border-theme_color" />
+                                    <input type="text" id="ssc_reg" name="ssc_reg" placeholder="" required class="border rounded-md h-10 w-full p-2 text-sm font-light font-poppins text-text_colors focus:outline-none focus:border-theme_color" />
                                     @error('ssc_reg')
                                         <span style="color: #f00;">{{ $message }}</span>
                                     @enderror
@@ -829,7 +808,7 @@
                                     @enderror
                                 </div>
                                 <div class="input_group sm:col-span-2">
-                                    <label for="" class="inline-block pb-1 text-sm text-black text-opacity-50 font-normal font-poppins">membership type</label>
+                                    <label for="" class="inline-block pb-1 text-sm text-black text-opacity-50 font-normal font-poppins">Board</label>
                                     <select name="ssc_board" class="text-black font-normal font-poppins w-full border h-10 rounded-md p-2 focus:outline-none focus:border-theme_color" aria-invalid="false">
                                         <option value="0">Barishal</option>
                                         <option value="1">Chattogram</option>
@@ -853,7 +832,7 @@
                                                     Upload an attachment
                                                 </p>
                                             </div>
-                                            <input id="dropzone-file" name="ssc_document" type="file" />
+                                            <input id="dropzone-file" required name="ssc_document" type="file" />
                                             @error('ssc_document')
                                                 <span style="color: #f00;">{{ $message }}</span>
                                             @enderror
@@ -887,19 +866,34 @@
                                     <label for="emergencyContact" class="inline-block pb-1 text-sm text-black text-opacity-50 font-normal font-poppins">
                                         <span class="text-sm font-medium">Emergency Contact Person name and Mobile number</span> <span class="text-xs">Optional</span>
                                     </label>
-                                    <textarea name="emergency_contact" id="emergencyContact" rows="2" class="border rounded-md w-full p-2 text-sm font-light font-poppins text-text_colors focus:outline-none focus:border-theme_color"></textarea>
+                                    <textarea name="emergency_contact" required id="emergencyContact" rows="2" class="border rounded-md w-full p-2 text-sm font-light font-poppins text-text_colors focus:outline-none focus:border-theme_color"></textarea>
                                     @error('emergency_contact')
-                                    <span style="color: #f00;">{{ $message }}</span>
+                                        <span style="color: #f00;">{{ $message }}</span>
                                     @enderror
                                 </div>
                                 <div class="input_group sm:col-span-4">
-                                    <label for="emergencyContact" class="inline-block pb-1 text-sm text-black text-opacity-50 font-normal font-poppins"> <span class="text-sm font-medium">Permanent Address</span> <span class="text-xs">Optional</span> </label>
-                                    <textarea name="permanent_address" id="emergencyContact" rows="2" class="border rounded-md w-full p-2 text-sm font-light font-poppins text-text_colors focus:outline-none focus:border-theme_color"></textarea>
+                                    <label for="emergencyContact" class="inline-block pb-1 text-sm text-black text-opacity-50 font-normal font-poppins">
+                                        <span class="text-sm font-medium">
+                                            Permanent Address
+                                        </span>
+                                    </label>
+                                    <textarea name="permanent_address" required id="emergencyContact" rows="2" class="border rounded-md w-full p-2 text-sm font-light font-poppins text-text_colors focus:outline-none focus:border-theme_color"></textarea>
                                     @error('permanent_address')
-                                    <span style="color: #f00;">{{ $message }}</span>
+                                        <span style="color: #f00;">{{ $message }}</span>
                                     @enderror
                                 </div>
                                 <div class="input_group sm:col-span-4">
+                                    <label for="emergencyContact" class="inline-block pb-1 text-sm text-black text-opacity-50 font-normal font-poppins">
+                                        <span class="text-sm font-medium">
+                                            Permanent Address
+                                        </span>
+                                    </label>
+                                    <textarea name="permanent_address" required id="emergencyContact" rows="2" class="border rounded-md w-full p-2 text-sm font-light font-poppins text-text_colors focus:outline-none focus:border-theme_color"></textarea>
+                                    @error('permanent_address')
+                                        <span style="color: #f00;">{{ $message }}</span>
+                                    @enderror
+                                </div>
+                                {{-- <div class="input_group sm:col-span-4">
                                     <label for="busReg" class="inline-block pb-1 text-sm text-black text-opacity-50 font-normal font-poppins">
                                         <span class="text-sm font-medium">Business Registration Number (BRN, if any)</span> <span class="text-xs">Optional</span>
                                     </label>
@@ -907,17 +901,17 @@
                                     @error('brn_number')
                                     <span style="color: #f00;">{{ $message }}</span>
                                     @enderror
-                                </div>
+                                </div> --}}
                                 <div class="input_group sm:col-span-4">
-                                    <label for="birDay" class="inline-block pb-1 text-sm text-black text-opacity-50 font-normal font-poppins"><span class="text-sm font-medium">Birthday</span> <span class="text-xs">Optional</span></label>
-                                    <input type="text" id="birDay" name="birth_day" placeholder="" class="border rounded-md h-10 w-full p-2 text-sm font-light font-poppins text-text_colors focus:outline-none focus:border-theme_color" />
+                                    <label for="birDay" class="inline-block pb-1 text-sm text-black text-opacity-50 font-normal font-poppins"><span class="text-sm font-medium">Date of Birth</span> <span class="text-xs">Optional</span></label>
+                                    <input type="date" id="birDay" name="birth_day" placeholder="" class="border rounded-md h-10 w-full p-2 text-sm font-light font-poppins text-text_colors focus:outline-none focus:border-theme_color" />
                                     @error('birth_day')
                                     <span style="color: #f00;">{{ $message }}</span>
                                     @enderror
                                 </div>
                             </div>
                             <div class="input_group sm:col-span-4">
-                                <label for="bloodGroup" class="inline-block pb-1 text-sm text-black text-opacity-50 font-normal font-poppins"><span class="text-sm font-medium">Birthday</span> <span class="text-xs">Optional</span></label>
+                                <label for="bloodGroup" class="inline-block pb-1 text-sm text-black text-opacity-50 font-normal font-poppins"><span class="text-sm font-medium">Blood Group</span> <span class="text-xs">Optional</span></label>
                                 <select name="blood_group" id="bloodGroup" class="border rounded-md h-10 w-full p-2 text-sm font-light font-poppins text-text_colors focus:outline-none focus:border-theme_color">
                                     <option value="0">A(+)</option>
                                     <option value="1">A(-)</option>

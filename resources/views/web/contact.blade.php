@@ -13,16 +13,16 @@
                     </p>
                 </div>
                 <div class="text_content text-[#5e6e82] text-base leading-normal font-light font-poppins text-center pt-10">
-                    <h4 class="font-semibold">Dr. Nazmul Arefin Momel</h4>
+                    <h4 class="font-semibold">Professor Emeritus  Ainun Nishat, PhD.</h4>
                     <p>President,</p>
                     <p>Dhaka Collegiate School Alumni Association</p>
-                    <p>president@dcsa.com</p>
+                    <p>dcs.1835@gmail.com</p>
                 </div>
                 <div class="text_content text-[#5e6e82] text-base leading-normal font-light font-poppins text-center pt-7">
-                    <h4 class="font-semibold">Dr. Nazmul Arefin Momel</h4>
-                    <p>Vice President,</p>
+                    <h4 class="font-semibold">Md. Harun-Ur-Rashid</h4>
+                    <p>Secretary General</p>
                     <p>Dhaka Collegiate School Alumni Association</p>
-                    <p>president@dcsa.com</p>
+                    <p>dcs.1835@gmail.com</p>
                 </div>
             </div>
         </div>
